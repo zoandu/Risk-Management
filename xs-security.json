@@ -2,14 +2,29 @@
   "scopes": [
     {
       "name": "$XSAPPNAME.RiskViewer",
-      "description": "View application data"
+      "description": "Read-only access"
     },
     {
       "name": "$XSAPPNAME.RiskManager",
-      "description": "Manager application data"
+      "description": "Full access to edit and view"
     }
   ],
   "attributes": [],
-  "role-templates": [],
+  "role-templates": [
+    {
+      "name": "ViewerRole",
+      "description": "Read-only access",
+      "scope-references": [
+        "$XSAPPNAME.RiskViewer"
+      ]
+    },
+    {
+      "name": "ManagerRole",
+      "description": "Full access to edit and view",
+      "scope-references": [
+        "$XSAPPNAME.RiskManager"
+      ]
+    }
+  ],
   "authorities-inheritance": false
 }
