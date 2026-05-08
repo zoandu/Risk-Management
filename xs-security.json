@@ -1,0 +1,15 @@
+{
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.RiskViewer",
+      "description": "View application data"
+    },
+    {
+      "name": "$XSAPPNAME.RiskManager",
+      "description": "Manager application data"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [],
+  "authorities-inheritance": false
+}
