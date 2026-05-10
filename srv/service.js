@@ -1,6 +1,7 @@
 const cds = require('@sap/cds');
 
 module.exports = cds.service.impl(async (srv) => {
+
     // Connect to the external service definition
     const remoteService = await cds.connect.to('API_BUSINESS_PARTNER'); 
 
@@ -9,4 +10,5 @@ module.exports = cds.service.impl(async (srv) => {
         // Forward the query to the remote service
         return remoteService.run(req.query);
     });
+    
 });
